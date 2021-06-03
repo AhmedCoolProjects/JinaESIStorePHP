@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.right_container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.margin_btns {
+  margin-right: 16px;
+}
+@media screen and (max-width: 800px) {
+  .margin_btns {
+    margin-right: 0;
+  }
+  .margin_btns button {
+    font-size: 0.8rem;
+  }
+}
