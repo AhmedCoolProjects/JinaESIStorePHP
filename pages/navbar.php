@@ -19,11 +19,12 @@
         <div class="right_container">
 
             <div class="nav-item margin_btns">
-                <button style="border-radius: 80px;padding: 8px !important;width:40px;height:40px" type="button" class="btn btn-primary">
-                    <span class="material-icons">
-                        shopping_cart
-                    </span>
-                </button>
+                <a href="./basket.php">
+                    <button style="border-radius: 80px;padding: 8px !important;width:40px;height:40px" type="button" class="btn btn-primary">
+                        <span class="material-icons">
+                            shopping_cart
+                        </span>
+                    </button></a>
             </div>
             <div class="nav_right">
                 <div class="nav-item dropdown">
