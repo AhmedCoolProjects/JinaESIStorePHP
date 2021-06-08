@@ -12,6 +12,18 @@
 .margin_btns {
   margin-right: 16px;
 }
+.nbr_of_products_basket {
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute !important;
+  top: 0;
+  color: green;
+  right: 0;
+  background-color: red !important;
+}
 @media screen and (max-width: 800px) {
   .margin_btns {
     margin-right: 0;

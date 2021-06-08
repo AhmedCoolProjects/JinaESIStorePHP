@@ -1,4 +1,5 @@
 <?php include("./header.php"); ?>
+<?php include("../backend/products.php"); ?>
 
 <head>
     <!-- css file -->
@@ -9,42 +10,62 @@
 <body>
     <?php include("./navbar.php"); ?>
     <div style="height: 100%;padding-top:48px;" class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div style="margin-bottom: 24px;" class="card">
-                    <div class="card-body">
-                        <div class="small_info">
-                            <p class="text-secondary mb-1"> Products in your basket</p><strong>2 </strong>
+        <?php
+        if (!isset($_SESSION['products'])) {
+            echo 'empty';
+        } else {
+            $total_price = 0;
+            foreach ($_SESSION['products'] as $key => $item) {
+                $total_price = $total_price + floatval(substr($data[$item]['price'], 0, -4));
+            }
+        ?>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div style="margin-bottom: 24px;" class="card">
+                        <div class="card-body">
+                            <div class="small_info">
+                                <p class="text-secondary mb-1"> Products in your basket</p><strong>
+                                    <?php
+                                    echo count($_SESSION['products']);
+                                    ?>
+                                </strong>
+                            </div>
+                            <div class="small_info">
+                                <p class="text-muted font-size-sm">TOTAL</p><strong><?php echo $total_price; ?> DHs </strong>
+                            </div>
+                            <div class="small_btn_pay"><button style="padding: 4px 12px ;align-self:flex-end" class="btn btn-outline-success my-2 my-sm-0">Pay</button></div>
                         </div>
-                        <div class="small_info">
-                            <p class="text-muted font-size-sm">TOTAL</p><strong>200 DHs </strong>
-                        </div>
-                        <div class="small_btn_pay"><button style="padding: 4px 12px ;align-self:flex-end" class="btn btn-outline-success my-2 my-sm-0">Pay</button></div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-7 container_products_basket">
-                <?php
-                for ($i = 0; $i < 4; $i++) {
-                ?> <div class="card card_product_basket">
-                        <img class="product_basket_image" src="https://ma.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/72/405983/1.jpg?5851" alt="product_image">
-                        <div class="product_basker_info">
+                <div class="col-lg-7 container_products_basket">
+                    <?php
+                    foreach ($_SESSION['products'] as $key => $item) {
+                        $my_product = $data[$item];
+                    ?> <div class="card card_product_basket">
+                            <img class="product_basket_image" src=<?php echo $my_product['image-url']; ?> alt="product_image">
+                            <div class="product_basker_info">
 
-                            <h4>title</h4>
-                            <strong>price</strong>
-                            <div class="add_or_delete_product">
-
-                                <input type="number" name="" id="">
-
-
+                                <h4>
+                                    <?php
+                                    echo $my_product['title']; ?>
+                                </h4>
+                                <strong><?php echo $my_product['price']; ?></strong>
+                                <div class="add_or_delete_product">
+                                    <input id="add_delete_<?php echo $item; ?>" onchange="changeProductCount(<?php echo $item; ?>)" type="number" name="" id="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php
-                }
-                ?>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
-        </div>
-    </div>
 
+
+        <?php
+        }
+
+        ?>
+    </div>
+    <script src="../js/basket.js"></script>
 </body>

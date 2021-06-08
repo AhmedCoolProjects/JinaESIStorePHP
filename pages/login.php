@@ -1,4 +1,7 @@
-<?php include("./header.php"); ?>
+<?php
+session_start();
+session_destroy();
+include("./header.php"); ?>
 
 <head>
     <!-- css file -->

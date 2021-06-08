@@ -14,7 +14,9 @@ $users_data = json_decode($json_data, true);
 $is_logged = false;
 
 if (in_array($user_info, $users_data)) {
-    header("Location:../pages/dashboard.php?user=$useremail");
+    session_start();
+    $_SESSION["user_info"] = $user_info;
+    header("Location:../pages/dashboard.php");
 } else {
 
 ?>
