@@ -3,7 +3,7 @@
 
 <head>
     <!-- css file -->
-    <link rel="stylesheet" href="../styles/basket.css">
+    <link rel="stylesheet" href="./styles/basket.css">
     <title>Basket</title>
 </head>
 

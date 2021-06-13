@@ -5,7 +5,7 @@ include("./header.php"); ?>
 
 <head>
     <!-- css file -->
-    <link rel="stylesheet" href="../styles/auth.css">
+    <link rel="stylesheet" href="./styles/auth.css">
     <title>Login</title>
 </head>
 

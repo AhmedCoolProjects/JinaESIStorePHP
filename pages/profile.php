@@ -2,7 +2,7 @@
 
 <head>
     <!-- css file -->
-    <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="./styles/profile.css">
     <title>Profile</title>
 </head>
 
@@ -14,7 +14,7 @@
                 <div style="height: 350px;" class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="../assets/yanni.png" alt="me" class="rounded-circle p-1 bg-primary" width="160" style="object-fit: cover;" height="160">
+                            <img src="./assets/yanni.png" alt="me" class="rounded-circle p-1 bg-primary" width="160" style="object-fit: cover;" height="160">
                             <div class="mt-3">
                                 <h4><?php echo $_SESSION['user_info']['Prenom'] . " " . $_SESSION['user_info']['Nom']; ?></h4>
                                 <p class="text-secondary mb-1">Data Science Student at ESI</p>

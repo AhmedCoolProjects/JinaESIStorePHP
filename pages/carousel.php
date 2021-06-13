@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="../styles/carousel.css">
+    <link rel="stylesheet" href="./styles/carousel.css">
 </head>
 <?php
 $carousel_resources = [

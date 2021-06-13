@@ -15,6 +15,6 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- js link -->
-    <script src="../js/dashboard.js"></script>
+    <script src="./js/dashboard.js"></script>
 
 </head>

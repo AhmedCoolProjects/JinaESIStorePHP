@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <!-- nav bar -->
 <nav style="position: sticky;top:0;z-index:10;box-shadow:.5px .5px 10px rgba(0,0,255,.4)" class="navbar navbar-expand-lg navbar-light bg-light">

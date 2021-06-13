@@ -2,7 +2,7 @@
 
 <head>
     <!-- css file -->
-    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
     <title>Jina ESI Store</title>
 </head>
 
