@@ -1,5 +1,5 @@
 <?php include("./header.php"); ?>
-<?php include("../backend/products.php"); ?>
+<?php include("./backend/products.php"); ?>
 
 <head>
     <!-- css file -->
@@ -101,7 +101,7 @@
             if (parseInt(nbr) <= 1) {
                 $.ajax({
                     type: "POST",
-                    url: "../backend/addsubitem.php",
+                    url: "./backend/addsubitem.php",
                     data: {
                         item_id: item_id,
 

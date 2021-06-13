@@ -25,7 +25,7 @@ if (in_array($user_info, $users_data_small)) {
         }
     }
 
-    header("Location:../pages/index.php");
+    header("Location:../index.php");
 } else {
 
 ?>

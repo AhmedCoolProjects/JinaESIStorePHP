@@ -13,7 +13,7 @@
     <!-- end carousel -->
     <!-- products grid -->
     <?php
-    include "../backend/products.php";
+    include "./backend/products.php";
     ?>
     <div class="container" style="margin-top:8px;text-align:center">
         <h3>New Arrival</h3>
@@ -52,7 +52,7 @@
                     <img id="modal_product_image" src="" alt="product_image" style="width: 400px;object-fit:contain" />
                     <div class="modal_product_info">
                         <strong id="modal_product_price" style="align-self: flex-start;"></strong>
-                        <form method="POST" action="../backend/additem.php">
+                        <form method="POST" action="./backend/additem.php">
                             <input id="modal_product_id_" name="add_item_to_basket_id" type="hidden">
                             <button type="submit" class="btn btn-outline-success my-2 my-sm-0" style="align-self: flex-end;">Add to basket</button>
                         </form>

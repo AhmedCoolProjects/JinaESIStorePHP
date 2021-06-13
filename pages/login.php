@@ -10,7 +10,7 @@ include("./header.php"); ?>
 </head>
 
 <body>
-    <form action="../backend/login.php" method="POST" class="my_form">
+    <form action="./backend/login.php" method="POST" class="my_form">
         <h2>Login</h2>
         <div class="form-group">
             <label for="exampleInputEmail1">ESI Email address</label>
@@ -63,7 +63,7 @@ include("./header.php"); ?>
                 alert("enter your email please")
             } else {
                 let emails_data = [];
-                fetch('../backend/esi_student_data.json').then(response => {
+                fetch('./backend/esi_student_data.json').then(response => {
                     return response.json();
                 }).then(users_data => {
                     users_data.forEach(user => {
