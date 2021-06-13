@@ -14,10 +14,16 @@
         if (!isset($_SESSION['products'])) {
             echo 'empty';
         } else {
-            $total_price = 0;
-            foreach ($_SESSION['products'] as $key => $item) {
-                $total_price = $total_price + floatval(substr($data[$item]['price'], 0, -4));
+            if (count($_SESSION['products']) == 0) {
+                echo "empty";
+            } else {
+                $total_price = 0;
+                foreach ($_SESSION['products'] as $key => $item) {
+                    $total_price = $total_price + floatval(substr($data[$item]['price'], 0, -4));
+                }
             }
+
+
         ?>
             <div class="row">
                 <div class="col-lg-5">
@@ -51,7 +57,13 @@
                                 </h4>
                                 <strong><?php echo $my_product['price']; ?></strong>
                                 <div class="add_or_delete_product">
-                                    <input id="add_delete_<?php echo $item; ?>" onchange="changeProductCount(<?php echo $item; ?>)" type="number" name="" id="">
+                                    <span onclick="subLessProduct(<?php echo $item; ?>)" class="material-icons">
+                                        indeterminate_check_box
+                                    </span>
+                                    <div id='item_count_<?php echo $item; ?>'>2</div>
+                                    <span onclick="addMoreProduct(<?php echo $item; ?>)" class="material-icons">
+                                        add_box
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -67,5 +79,37 @@
 
         ?>
     </div>
-    <script src="../js/basket.js"></script>
+    <script>
+        function addMoreProduct(item_id) {
+            var nbr = $(`#item_count_${item_id}`).text();
+            var nbr = parseInt(nbr) + 1;
+            $(`#item_count_${item_id}`).text(nbr);
+        }
+
+        function subLessProduct(item_id) {
+            var nbr = $(`#item_count_${item_id}`).text();
+            if (parseInt(nbr) <= 1) {
+                $.ajax({
+                    type: "POST",
+                    url: "../backend/addsubitem.php",
+                    data: {
+                        item_id: item_id,
+
+                    },
+                    cache: false,
+                    success: function(data) {
+                        alert(data);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr);
+                    }
+                })
+                location.reload();
+            } else {
+                var nbr = parseInt(nbr) - 1;
+                $(`#item_count_${item_id}`).text(nbr);
+            }
+
+        }
+    </script>
 </body>
