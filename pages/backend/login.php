@@ -38,7 +38,7 @@ if (in_array($user_info, $users_data_small)) {
     <body style="display: flex;flex-direction:column;align-items:center;">
         <h2 style="color: red;">Invalid User Informations</h2>
         <h4>Please click reset password to get your user informations</h4>
-        <a href="../pages/login.php">
+        <a href="../login.php">
             <span class="material-icons">
                 arrow_back
             </span>
