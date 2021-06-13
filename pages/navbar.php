@@ -3,7 +3,7 @@
 </head>
 <!-- nav bar -->
 <nav style="position: sticky;top:0;z-index:10;box-shadow:.5px .5px 10px rgba(0,0,255,.4)" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="./dashboard.php">Jina ESI Store</a>
+    <a class="navbar-brand" href="./index.php">Jina ESI Store</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

@@ -24,8 +24,8 @@ if (in_array($user_info, $users_data_small)) {
             $_SESSION["user_info"] = $user;
         }
     }
-    
-    header("Location:../pages/dashboard.php");
+
+    header("Location:../pages/index.php");
 } else {
 
 ?>

@@ -8,5 +8,5 @@ if (!isset($_SESSION['user_info'])) {
         $_SESSION['products'] = array();
     }
     array_push($_SESSION['products'], $item_id);
-    header("Location:../pages/dashboard.php");
+    header("Location:../pages/index.php");
 }
