@@ -16,7 +16,7 @@
                         <div class="d-flex flex-column align-items-center text-center">
                             <img src="../assets/yanni.png" alt="me" class="rounded-circle p-1 bg-primary" width="160" style="object-fit: cover;" height="160">
                             <div class="mt-3">
-                                <h4>Ahmed Bargady</h4>
+                                <h4><?php echo $_SESSION['user_info']['Prenom'] . " " . $_SESSION['user_info']['Nom']; ?></h4>
                                 <p class="text-secondary mb-1">Data Science Student at ESI</p>
                                 <p class="text-muted font-size-sm">Laayoune, Morocco</p>
                                 <button class="btn btn-outline-primary">Change Image</button>
@@ -30,10 +30,18 @@
                     <div class="card-body">
                         <div class="row mb-3">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Full Name</h6>
+                                <h6 class="mb-0">First Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Ahmed Bargady">
+                                <input type="text" class="form-control" value=<?php echo $_SESSION['user_info']['Prenom']; ?>>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Last Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value=<?php echo $_SESSION['user_info']['Nom']; ?>>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -41,7 +49,7 @@
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="ahmed.bargady@esi.ac.ma">
+                                <input type="text" class="form-control" value=<?php echo $_SESSION['user_info']['Email']; ?>>
                             </div>
                         </div>
                         <div class="row mb-3">

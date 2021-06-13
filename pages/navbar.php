@@ -54,7 +54,7 @@
                     } else {
                     ?>
                         <a style="align-items:center;display:flex;flex-direction:row;justify-content:center" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php echo $_SESSION['user_info']['email']; ?>
+                            <?php echo $_SESSION['user_info']['Email']; ?>
                             <span class="material-icons">
                                 face
                             </span>

@@ -63,11 +63,11 @@ include("./header.php"); ?>
                 alert("enter your email please")
             } else {
                 let emails_data = [];
-                fetch('../backend/users.json').then(response => {
+                fetch('../backend/esi_student_data.json').then(response => {
                     return response.json();
                 }).then(users_data => {
                     users_data.forEach(user => {
-                        emails_data.push(user.email)
+                        emails_data.push(user.Email)
                     });
                     if (emails_data.includes(input_email)) {
                         var user_password = users_data[emails_data.indexOf(input_email)].password

@@ -57,13 +57,23 @@
                                 </h4>
                                 <strong><?php echo $my_product['price']; ?></strong>
                                 <div class="add_or_delete_product">
-                                    <span onclick="subLessProduct(<?php echo $item; ?>)" class="material-icons">
+                                    <span class="material-icons">
                                         indeterminate_check_box
                                     </span>
-                                    <div id='item_count_<?php echo $item; ?>'>2</div>
-                                    <span onclick="addMoreProduct(<?php echo $item; ?>)" class="material-icons">
+                                    <div id='item_count_<?php echo $item; ?>'>1</div>
+                                    <span class="material-icons">
                                         add_box
                                     </span>
+                                    <!-- <span onclick="subLessProduct(<?php //echo $item; 
+                                                                        ?>)" class="material-icons">
+                                        indeterminate_check_box
+                                    </span>
+                                    <div id='item_count_<?php //echo $item; 
+                                                        ?>'>1</div>
+                                    <span onclick="addMoreProduct(<?php //echo $item; 
+                                                                    ?>)" class="material-icons">
+                                        add_box
+                                    </span> -->
                                 </div>
                             </div>
                         </div>
